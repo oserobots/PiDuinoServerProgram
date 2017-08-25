@@ -1,0 +1,11 @@
+
+    What is your team name?
+    Who are the members of your team?
+    What operating systems concepts do you expect to cover?
+    What is the category of your project? (Create, Examine, Customize, other--explain)
+    Explain your project and its goals. It is okay to have some reach goals that you aren't sure if you'll be able to get to.
+    Why is this project interesting to you?
+    Detail a plan for how you will accomplish your goals in a timely fashion.
+    What unanswered questions do you still have? (e.g., not sure of all the types of schedulers in Linux, don't yet understand a certain API, not sure how to structure code, etc.)
+    Who (if anyone) on your team has experience with the target technology, language, or API(s)?
+    What do you expect to gain from this experience?
