@@ -4,11 +4,11 @@
 PiDuino Awesomeness
 
 ### Who are the members of your team?
-Clint Bramlette
+Clint Bramlette  
 Senobio Chavez
 ### What operating systems concepts do you expect to cover?
-Threading
-Sockets
+Threading  
+Sockets  
 Other things (as they occur)
 ### What is the category of your project? (Create, Examine, Customize, other--explain)
 Create
