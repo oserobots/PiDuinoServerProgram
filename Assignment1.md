@@ -5,7 +5,8 @@ PiDuino Awesomeness
 
 ### Who are the members of your team?
 Clint Bramlette  
-Senobio Chavez
+Senobio Chavez  
+Marcus Catchpole
 ### What operating systems concepts do you expect to cover?
 Threading  
 Sockets  
