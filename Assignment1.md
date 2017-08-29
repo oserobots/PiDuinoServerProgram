@@ -1,8 +1,8 @@
 # project-piduino-awesomeness
  
-##
-###What is your team name?
+### What is your team name?
 PiDuino Awesomeness
+
 ### Who are the members of your team?
 Clint Bramlette
 Senobio Chavez
