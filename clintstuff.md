@@ -11,7 +11,7 @@ Arduino Builder is a standalone application.  It include Arduino Uploader which 
 
 http://arduinodev.com/arduino-uploader/
 
-Then you can compile via the following line:
+Then you can compile via the following line:  
 ./ArduinoUploader [sketch/HEX file] [board type] 
 
 ### Porting to Arduino from Linux/Rasbian
