@@ -7,7 +7,7 @@
     echo date('Y-m-d H:i:s');
 ?>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="Upload.php" method="post" enctype="multipart/form-data">
 Select image to upload:
 <input type="file" name="fileToUpload" id="fileToUpload">
 <input type="submit" value="Upload Textfile" name="submit">
