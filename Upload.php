@@ -4,6 +4,26 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $textFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
+
+$files_q = scandir($target_dir);
+$lastIndex = count($files_q) - 2; //because php add one?
+$lastFile = $files_q[$lastIndex];
+$lastNum = intval(substr($lastFile, 0, 3)); 
+$nextNum = $lastNum + 1;
+$nextFile = "$nextNum.txt";
+if ($nextNum < 10){
+	$nextFile = "0$nextFile";
+	if ($nextNum < 100){
+		$nextFile = "0$nextFile";
+	}
+}
+if ($nextNum > 999){
+	$nextNum = 0; //wrap back to 0
+}
+echo "[ ] File to be saved as job #$nextNum \n";
+$target_file = $target_dir . $nextFile;
+
+
 // Check if text file is a actual text or fake text file
 if(isset($_POST["submit"])) {
     $check = gettext($_FILES["fileToUpload"]["tmp_name"]);
