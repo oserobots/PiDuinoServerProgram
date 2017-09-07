@@ -1,0 +1,63 @@
+//============================================================================
+// Name        : awesome.cpp
+// Author      : Marcus Catchpole
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include<iostream>
+#include<string>
+#include<sstream>
+#include<stdlib.h>
+
+#include<stdio.h>
+
+using namespace std;
+
+int main()
+{
+    stringstream strs;
+
+    int queNumber = 1;
+    std::string n = "";
+
+    while(true)
+    {
+        n="";
+        strs.str("");
+        //queNumber = stoi(n);
+
+        if(queNumber<10)
+            n +="0";
+        if(queNumber<100)
+            n +="0";
+
+        //itoa(queNumber,n);
+
+        //char* buffer = "";
+
+        strs<<queNumber;
+        n+=strs.str();
+        //cout<<n<<endl;
+
+
+        std::string sysRun = "";
+        sysRun += "cd ~/awesome/q\n\
+        while [ ! -e "+n+".txt ];\
+        do sleep 1;\
+        done\n\
+        cp "+n+".txt src/sketch.ino\n\
+        ino build\n\
+        ino upload\n\
+        sleep 10 \n";
+        system(sysRun.c_str());
+
+        queNumber++;
+
+    }
+
+
+    return 0;
+}
+
