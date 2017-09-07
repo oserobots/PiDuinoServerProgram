@@ -12,6 +12,8 @@ groupadd awesome
 useradd -G awesome www-data
 useradd -G awesome pi
 cd /awesome
-sudo chown :awesome q
+sudo chown www-data:awesome q
 sudo chmod g=rwx q
+sudo chown www-data:awesome .
+
 
