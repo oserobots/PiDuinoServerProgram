@@ -7,7 +7,6 @@
 <?php
     echo "hello world\n";
     echo date('Y-m-d H:i:s');
-    phpinfo();
 ?>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
