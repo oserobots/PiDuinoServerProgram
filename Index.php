@@ -1,5 +1,3 @@
-<"php.validate.executablePath" = "C:\Users\senob\OneDrive\Documents\Assignments\CSCE489\php-7.1.9-Win32-VC14-x64\php.exe"
-
 <!DOCTYPE html>
 <html>
 <body>
