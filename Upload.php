@@ -7,9 +7,15 @@ $textFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
 $files_q = scandir($target_dir);
 $lastIndex = count($files_q) - 2; //because php add one?
-$lastFile = $files_q[$lastIndex];
-$lastNum = intval(substr($lastFile, 0, 3)); 
-$nextNum = $lastNum + 1;
+echo "[ ] There  are $lastIndex jobs in the queue. ";
+$nextNum = 0; //initialize
+if ($lastIndex < 1){
+	$nextNum = 1; //no jobs
+}else{
+	$lastFile = $files_q[$lastIndex];
+	$lastNum = intval(substr($lastFile, 0, 3)); 
+	$nextNum = $lastNum + 1;
+}
 $nextFile = "$nextNum.txt";
 if ($nextNum < 10){
 	$nextFile = "0$nextFile";
@@ -28,10 +34,10 @@ $target_file = $target_dir . $nextFile;
 if(isset($_POST["submit"])) {
     $check = gettext($_FILES["fileToUpload"]["tmp_name"]);
     if($check !== false) {
-        echo "File is text.\n";
+        echo "[ ] File is text.\n";
         $uploadOk = 1;
     } else {
-        echo "File is not text.\n";
+        echo "[ ] File is not text.\n";
         $uploadOk = 0;
     }
 }
@@ -56,9 +62,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.\n";
+        echo "[+] The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.\n";
     } else {
-        echo "Sorry, there was an error uploading your file.\n";
+        echo "[-] Sorry, there was an error uploading your file.\n";
     }
 }
 ?>
